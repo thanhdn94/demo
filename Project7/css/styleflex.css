@@ -1,0 +1,879 @@
+	/* CSS GLOBAL */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+	font-weight: 500;
+}
+
+.wrapper {
+	max-width: 950px;
+	margin: auto;
+}
+
+.row {
+	display: -webkit-box;
+	/* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;
+	/* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;
+	/* TWEENER - IE 10 */
+	display: -webkit-flex;
+	/* NEW - Chrome */
+	display: flex;
+	/* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+.full-width {
+	width: 100%;
+	background: #eee;
+	margin-top: 80px;
+}
+
+.column h2 {
+	font-family: Meiryo;
+	font-size: 26px;
+	font-weight: normal;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.font-text {
+	font-size: 16px;
+	font-family: Meiryo;
+}
+
+.color-primary {
+	color: #0f5c9b;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+button {
+	background: #0f5c9b;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	transition: all 0.3s linear;
+}
+
+button.email {
+	background: #ffed4d;
+	color: #fd7e00;
+}
+
+button:hover {
+	background: transparent;
+	color: #0f5c9b;
+	border: 1px solid #0f5c9b;
+}
+
+button.email:hover {
+	color: #fd7e00;
+	border: 1px solid #fd7e00;
+}
+
+
+/* CSS MENU GENERAL */
+
+.logo {
+	display: flex;
+	flex: 1 1 auto;
+	align-items: center;
+	justify-content: space-between;
+	height: 100px;
+	padding-top: 5px;
+}
+
+#menu ul {
+	display: flex;
+	width: 100%;
+	position: relative;
+}
+
+#menu ul li {
+	flex: 1 1 auto;
+}
+
+#menu ul li:last-child {
+	flex-grow: 0;
+}
+
+#menu ul li:last-child:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-right: 1px solid #ccc;
+	height: 40px;
+}
+
+#menu a:hover {
+	border-bottom: 4px solid #0e5b9a;
+}
+
+#menu a {
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	border-bottom: 4px solid #ddd;
+	color: black;
+	transition: .5s;
+}
+
+#menu span {
+	font-size: 12px;
+	font-weight: bold;
+	color: #0e5b9a;
+	display: block;
+	margin: 0px 0 20px 0;
+}
+
+
+/* CSS CONTENT GENERAL */
+
+.column p.sub {
+	padding: 45px 0;
+}
+
+.column>img,
+.column p {
+	margin: auto;
+	display: block;
+}
+
+.tv {
+	font-family: 'Hiragino Kaku Gothic Pro' !important;
+}
+
+.font-normal {
+	font-weight: normal !important;
+}
+
+.color-2 {
+	color: #545454;
+}
+
+.space {
+	margin: 30px 10px;
+}
+
+.overlay {
+	background: linear-gradient(90deg, rgba(15, 92, 155, 0.8), rgba(11, 72, 142, 0.8), rgba(15, 92, 155, 0.8)) no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-blend-mode: multiply;
+	z-index: 0;
+}
+
+.line {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-top: 4px solid #0f5c9b;
+	z-index: 999;
+}
+
+.btn-top {
+	position: fixed;
+	right: 10%;
+	bottom: 15px;
+	text-align: center;
+	color: #0f5c9b;
+	background: white;
+	padding: 10px;
+	cursor: pointer;
+	z-index: 999;
+	transition: background-color .3s, opacity .5s, visibility .5s;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.btn-top.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+.banner {
+	background: url('../images/長方形2.png') center no-repeat;
+	width: 100%;
+	background-size: cover;
+	height: 420px;
+	margin: 0px;
+	position: relative;
+}
+
+.banner-tv {
+	background: url('../images/シンボル11.png') center no-repeat;
+	background-size: cover;
+	height: 160px;
+}
+
+.banner p.caption {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 30px;
+	font-family: Meiryo;
+	border: 1px solid white;
+	padding: 15px;
+	text-align: center;
+}
+
+.banner-tv p.caption {
+	font-size: 28px;
+	border: none;
+}
+
+.news-wrapper {
+	padding: 30px 0;
+	border: 1px solid #ccc;
+}
+
+.item-wrap .item {
+	border: 1px solid #ddd;
+	flex: 1;
+}
+
+.item-wrap .item-head,
+.job-wrap .sort {
+	background: #0e5b9a;
+	padding: 2px 12px;
+	color: white;
+}
+
+.job-wrap .sort {
+	font-size: 26px;
+}
+
+.job-wrap {
+	margin: 30px 0;
+	padding: 25px;
+	background: #fff;
+	justify-content: space-between;
+}
+
+.job-wrap h2 {
+	padding: 15px 0;
+	margin-left: 10px;
+	display: inline;
+	color: #0e5b9a;
+	font-weight: bold;
+}
+
+.job-wrap p.sub {
+	padding: 30px 0;
+}
+
+.left {
+	position: relative;
+	background-size: 100%;
+	flex-basis: 90%;
+	height: 340px;
+	margin-right: 50px;
+}
+
+.left img:last-child {
+	position: absolute;
+	right: 0px;
+	bottom: 60px;
+}
+
+.title {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.category {
+	font-size: 12px;
+	font-weight: bold;
+	color: #0e5b9a;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.construction {
+	background: #eeeeee;
+	text-align: center;
+	padding: 60px 0 75px 0;
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.construction .sub {
+	margin-top: 35px;
+}
+
+.news-detail {
+	color: #0e5b9a;
+	line-height: 2;
+}
+
+.news-detail span {
+	color: black;
+	text-decoration: underline;
+}
+
+.item-wrap .sub {
+	padding: 25px 15px;
+}
+
+.item-wrap .item1 {
+	flex-grow: 2;
+}
+
+.item-wrap .item2 {
+	flex-grow: 1.5;
+}
+
+.item-wrap .item3 {
+	flex-grow: 3.5;
+}
+
+.content-sub {
+	background: #fff;
+	padding: 60px 0 80px 0;
+}
+
+.content-sub .text {
+	border: 1px solid #0e5b9a;
+	padding: 20px 70px;
+	margin-bottom: 45px;
+	color: #0e5b9a;
+	font-size: 24px;
+	font-weight: bold;
+	display: inline-block;
+}
+
+.content-sub .sub {
+	display: block;
+}
+
+.sub span {
+	color: #0e5b9a;
+	font-family: Hiragino Kaku Gothic Pro;
+}
+
+.sub,
+.banner {
+	font-family: Meiryo;
+	font-size: 16px;
+	margin: auto;
+}
+
+.contact {
+	display: flex;
+	text-align: center;
+	margin-right: 15px;
+}
+
+.contact .phone {
+	border: 1px solid #0e5b9a;
+	padding: 3px 30px;
+}
+
+.contact .phone p {
+	font-family: Meiryo;
+	font-size: 10px;
+	color: #0e5b9a;
+	margin-top: -6px;
+}
+
+.more-wrap {
+	margin-top: 50px;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.more {
+	width: 210px;
+	padding: 20px;
+	position: relative;
+}
+
+.more:nth-child(even) {
+	margin: 0 110px;
+}
+
+.more:nth-child(odd) {
+	margin: 0 15px;
+}
+
+.more .more-inner {
+	text-align: center;
+	color: #0e5b9a;
+}
+
+.more-inner img {
+	height: 60px;
+}
+
+.more-inner p {
+	font-size: 20px;
+	font-weight: bold;
+	color: #0e5b9a;
+	margin: 0px;
+}
+
+.more span:first-child:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	background: transparent;
+	border-top: 2px solid #0e5b9a;
+	border-left: 2px solid #0e5b9a;
+}
+
+.more span:first-child:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 8px;
+	height: 8px;
+	background: transparent;
+	border-top: 2px solid #0e5b9a;
+	border-right: 2px solid #0e5b9a;
+}
+
+.more span:last-child:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 8px;
+	height: 8px;
+	background: transparent;
+	border-bottom: 2px solid #0e5b9a;
+	border-left: 2px solid #0e5b9a;
+}
+
+.more span:last-child:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 8px;
+	height: 8px;
+	background: transparent;
+	border-bottom: 2px solid #0e5b9a;
+	border-right: 2px solid #0e5b9a;
+}
+
+.link-wrap {
+	border-bottom: 1px solid #ddd;
+	padding: 10px;
+}
+
+a.link {
+	border-bottom: 1px solid #ddd;
+	color: #0c5999;
+}
+
+
+/* END CSS GENERAL */
+
+
+/* CSS FOOTER GENERAL*/
+
+footer>p:last-child {
+	text-align: center;
+	padding: 20px;
+}
+
+.footer1 {
+	background: linear-gradient(90deg, rgba(15, 92, 155, 1), rgba(11, 72, 142, 1), rgba(15, 92, 155, 1)), url('../images/シンボル9.png') center no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-blend-mode: multiply;
+	width: 100%;
+	padding-top: 60px;
+	text-align: center;
+}
+
+.footer1 p:first-child {
+	color: white;
+	font-size: 24px;
+	border: 1px solid white;
+	display: block;
+	width: 500px;
+	margin: 0px auto 30px;
+	padding: 10px 15px;
+}
+
+.footer1 .sub {
+	color: white;
+	font-size: 16px;
+	margin: auto;
+}
+
+.footer1 .sub span {
+	color: #ffff4c;
+}
+
+footer .head {
+	justify-content: center;
+	color: white;
+	display: flex;
+	font-size: 34px;
+	padding: 40px 0 60px 0;
+}
+
+footer .head .work {
+	font-size: 10px;
+	margin-top: -12px;
+	display: block;
+	word-spacing: 15px;
+}
+
+.menu-footer {
+	background: #cccccc;
+	text-align: center;
+	padding: 40px 10px;
+}
+
+.menu-footer li {
+	display: inline-block;
+	font-family: Meiryo;
+	font-size: 14px;
+}
+
+.menu-footer li:before,
+.menu-footer li:last-child:after {
+	content: '|';
+	padding: 0 15px;
+}
+
+
+/* CSS FOR PC */
+
+@media only screen and (min-width: 768px) {
+	/* CSS NAV MENU PC*/
+	.head {
+		align-items: center;
+	}
+	.head .infor {
+		margin-right: 15px;
+		height: 65px;
+	}
+	.head .phone {
+		color: #878787;
+		font-weight: bold;
+		font-size: 32px;
+	}
+	.head .work {
+		font-size: 10px;
+		margin-top: -12px;
+		display: block;
+		word-spacing: 12px;
+		text-align: left;
+	}
+	#menu {
+		text-align: center;
+		margin-top: 10px;
+	}
+	#menu li {
+		background-image: url('../images/Nav_Separator.png');
+		background-repeat: no-repeat;
+		background-size: 1px 40px;
+		padding-left: 1px;
+	}
+	#menu a {
+		font-size: 14px;
+		font-weight: bold;
+		display: block;
+		border-bottom: 4px solid #ddd;
+		color: black;
+		transition: .5s;
+	}
+	#menu span {
+		font-size: 12px;
+		font-weight: bold;
+		color: #0e5b9a;
+		display: block;
+		margin: 0px 0 20px 0;
+	}
+	#menu a.last {
+		padding: 0px 10px;
+	}
+	.menu-toggle,
+	.news-wrapper>button {
+		display: none;
+	}
+	/* CSS CONTENT PC*/
+	.news {
+		padding: 5px 60px;
+		margin-right: 40px;
+		border-right: 1px solid #ddd;
+	}
+	.news-wrapper {
+		margin: 80px 0;
+	}
+	.news-detail {
+		align-self: center;
+	}
+	.img-job img {
+		min-width: 280px;
+		height: 160px;
+	}
+	.column h2 {
+		padding: 65px 0 15px 0;
+	}
+	.right .title {
+		font-weight: 500;
+	}
+	.item-wrap .item {
+		min-height: 185px;
+	}
+	.sub,
+	.banner {
+		display: inline-block;
+	}
+	.contact .phone {
+		width: 50%;
+	}
+	.contact button {
+		width: 50%;
+	}
+	.contact .phone {
+		margin-right: 15px;
+	}
+	/* CSS FOOTER PC */
+	footer .head .phone {
+		color: white;
+		margin-right: 50px;
+	}
+}
+
+
+/* CSS FOR SMARTPHONE */
+
+@media only screen and (max-width: 767px) {
+	/* CSS MENU SMARTPHONE */
+	.wrapper,
+	nav ul li {
+		width: 100%;
+		padding: 0 5px;
+		text-align: center;
+	}
+	nav ul li a {
+		font-size: 14px;
+		font-weight: bold;
+		padding: 0;
+		margin: 0;
+		display: block;
+		height: auto;
+		border-bottom: 4px solid #ddd;
+		color: black;
+	}
+	nav {
+		width: 100%;
+		height: 100vh;
+		background: #ccc;
+		position: absolute;
+		z-index: 1;
+		left: -100%;
+		transition: 0.3s ease-in-out;
+	}
+	nav.active,
+	.news-wrapper .news-detail span {
+		left: 0;
+		display: block;
+	}
+	#menu span {
+		margin: 0;
+	}
+	.btn-top {
+		padding: 5px;
+		font-size: 10px;
+	}
+	.head,
+	.text-center button,
+	.link-wrap {
+		display: none;
+	}
+	.menu-toggle {
+		height: 40px;
+		line-height: 40px;
+		font-size: 24px;
+		background: #0e5b9a;
+		border-radius: 5px;
+		padding: 0 10px;
+		color: white;
+	}
+	/* CSS CONTENT SMARTPHONE */
+	.row {
+		flex-wrap: wrap;
+	}
+	.column-reverse {
+		flex-direction: column-reverse;
+	}
+	.news,
+	.news-detail {
+		width: 100%;
+		padding: 40px;
+		text-align: left;
+	}
+	.banner {
+		background-size: cover;
+		width: 100% !important;
+		height: 300px;
+		margin: 0px;
+		position: relative;
+	}
+	.banner p.caption {
+		width: 80%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
+		font-size: 15px;
+		border: 1px solid white;
+		padding: 15px;
+		text-align: center;
+	}
+	.left img:last-child {
+		width: 100px;
+		bottom: 50px;
+		right: 10px;
+	}
+	.news-wrapper,
+	.news,
+	.news-detail {
+		padding: 0 10px;
+	}
+	.news-wrapper .news-detail p {
+		border: 1px dotted #ccc;
+		border-left: none;
+		border-right: none;
+		padding: 15px 0;
+	}
+	.construction {
+		padding: 30px 0 50px 0;
+		margin: 65px 0 0 0;
+	}
+	.sub {
+		margin: 0;
+		padding: 0 20px;
+	}
+	.right .sub {
+		margin: 50px 0;
+	}
+	.news-wrapper>button {
+		margin: 40px auto;
+	}
+	.item .sub {
+		text-align: left;
+		padding: 25px 30px;
+	}
+	.job-wrap {
+		text-align: left;
+	}
+	.job-head,
+	.content-sub,
+	.left {
+		padding: 0;
+		margin: 0;
+	}
+	.content-sub {
+		margin-top: 50px;
+		padding: 50px 0;
+	}
+	.content-sub .text {
+		padding: 20px 50px;
+		margin-bottom: 30px;
+	}
+	.more {
+		width: 33.3%;
+		padding: 15px 10px;
+	}
+	.more-wrap {
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+	.more:nth-child(even) {
+		margin: 0 10px;
+	}
+	.more:nth-child(odd) {
+		margin: 0px;
+	}
+	.more-inner button {
+		width: 80%;
+		font-size: 12px;
+		padding: 5px;
+	}
+	.more-inner p {
+		font-size: 12px;
+		font-weight: bold;
+		color: #0e5b9a;
+		margin: 0px;
+	}
+	.item-wrap {
+		flex-direction: column;
+		height: auto;
+	}
+	.contact {
+		flex-direction: column;
+		margin: 0 0 40px 0;
+	}
+	.contact .phone {
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+	.title {
+		margin-top: 35px;
+	}
+	.column .title {
+		padding-top: 60px;
+		padding-bottom: 5px;
+	}
+	.category {
+		margin: 0 0 35px 0;
+	}
+	/* CSS FOOTER FOR SP */
+	.footer1 p:first-child {
+		padding: 10px 20px;
+		width: 90%;
+	}
+	.footer1 button.email {
+		margin: 30px auto;
+		width: 80%;
+	}
+	.footer1 .head {
+		flex-direction: column;
+	}
