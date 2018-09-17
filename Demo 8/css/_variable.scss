@@ -1,0 +1,76 @@
+// Import Font
+@font-face {
+    font-family: Montserrat-Black;
+    src: url(../font/Montserrat-Black.otf);
+}
+@font-face {
+    font-family: Montserrat-Bold;
+    src: url(../font/Montserrat-Bold.otf);
+}
+@font-face {
+    font-family: Montserrat-ExtraBold;
+    src: url(../font/Montserrat-ExtraBold.otf);
+}
+@font-face {
+    font-family: Montserrat-Hairline;
+    src: url(../font/Montserrat-Hairline.otf);
+}
+@font-face {
+    font-family: Montserrat-Light;
+    src: url(../font/Montserrat-Light.otf);
+}
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../font/Montserrat-Regular.otf);
+}
+@font-face {
+    font-family: Montserrat-SemiBold;
+    src: url(../font/Montserrat-SemiBold.otf);
+}
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../font/Montserrat-Regular.otf);
+}
+
+// Set Color
+$primary-color: #555654;
+$second-color: #FFFFFF;
+$third-color: #8fda00;
+$four-color: #d9dadb;
+$five-color: #bcbec0;
+$menu-active: #b2b2b2;
+$btn-social: #f79018;
+$color-background: #f9f9f9;
+
+// Set size font
+$font-xxlsmall: 7px;
+$font-xxsmall: 9px;
+$font-xlsmall: 10px;
+$font-msmall: 11px;
+$font-xsmall: 12px;
+$font-xxsmall: 13px;
+$font-small: 14px;
+$font-smallx: 15px;
+$font-normal: 16px;
+$font-mid: 18px;
+$font-xmid: 20px;
+$font-xlmid: 24px;
+$font-mmid: 28px;
+$font-xxlmid: 28px;
+$font-large: 30px;
+$font-xlarge: 36px;
+$font-xllarge: 40px;
+
+// Set font-family
+$font-family-Black: 'Montserrat-Black';
+$font-family-Bold: 'Montserrat-Bold';
+$font-family-ExtraBold: 'Montserrat-ExtraBold';
+$font-family-Hairline: 'Montserrat-Hairline';
+$font-family-Light: 'Montserrat-Light';
+$font-family-Regular: 'Montserrat-Regular';
+$font-family-SemiBold: 'Montserrat-SemiBold';
+$font-family-UltraLight: 'Montserrat-UltraLight';
+
+// Set vỉew on devices
+$tablet-width: 768px;
+$pc-width: 1170px;
